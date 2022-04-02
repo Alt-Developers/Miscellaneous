@@ -11,6 +11,50 @@
   <body>
     <img src="./images/SS.png" class="logo" alt="" />
     <div class="rectangle"></div>
+    <div id="modal">
+      <h1 id="modal__h1">Discontinued</h1>
+      <p id="modal__p">This Project has been Discontinued.</p>
+      <div id="since">19 February 2022</div>
+    </div>
+    <div class="copy" >
+      <p>
+        GNU General Public License v2.0 &copy; 2022
+        <br />
+        SS Developers
+      </p>
+    </div>
+  </body>
+  <script>
+    const language = navigator.language;
+    const modal = document.getElementById("modal");
+    const modal__h1 = document.getElementById("modal__h1");
+    const modal__p = document.getElementById("modal__p");
+    const since = document.getElementById("since");
+
+    if (language.slice(0, 2).toUpperCase() === "TH") {
+      modal__h1.innerHTML = "โปรเจ็คท์โดนยกเลิก";
+      modal__h1.style.lineHeight = "5rem"
+      modal__p.textContent = "โปรเจ็คท์ดังกล่าวโดนยกเลิก"
+    }
+
+    console.log(language.slice(0, 2).toUpperCase());
+  </script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/SS.png" type="image/x-icon" />
+    <title>Dev News | SS Developers</title>
+  </head>
+  <body>
+    <img src="./images/SS.png" class="logo" alt="" />
+    <div class="rectangle"></div>
     <div class="modal">
       <div class="content">
         <h1>Discontinued</h1>
@@ -26,4 +70,4 @@
       </p>
     </div>
   </body>
-</html>
+</html> -->

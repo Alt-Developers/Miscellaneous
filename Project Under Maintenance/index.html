@@ -11,19 +11,33 @@
   <body>
     <img src="./images/SS.png" class="logo" alt="" />
     <div class="rectangle"></div>
-    <div class="modal">
-      <div class="content">
-        <h1>Under Maintenance</h1>
-        <p>This Project is now Under Maintenance please come back later.</p>
-      </div>
-      <div class="since">19 February 2022</div>
+    <div id="modal">
+      <h1 id="modal__h1">Under Maintenance</h1>
+      <p id="modal__p">The current project is under maintenance please come and check later</p>
+      <div id="since">19 February 2022</div>
     </div>
-    <div class="copy">
+    <div class="copy" >
       <p>
-        Mozilla Public License 2.0 &copy; 2022
+        GNU General Public License v2.0 &copy; 2022
         <br />
         SS Developers
       </p>
     </div>
   </body>
+  <script>
+    const language = navigator.language;
+    const modal = document.getElementById("modal");
+    const modal__h1 = document.getElementById("modal__h1");
+    const modal__p = document.getElementById("modal__p");
+    const since = document.getElementById("since");
+
+    if (language.slice(0, 2).toUpperCase() === "TH") {
+      modal__h1.innerHTML = "อยู่ในระหว่าง  <br>การปรับปรุงและพัฒนา";
+      modal.style.width = "38rem"
+      modal__h1.style.lineHeight = "5rem"
+      modal__p.textContent = "โปรเจ็คท์นี้อยู่ในระหว่างการปรับปรุงและพัฒนา โปรดกลับมาใหม่อีกครั้งใรภายหลัง"
+    }
+
+    console.log(language.slice(0, 2).toUpperCase());
+  </script>
 </html>
